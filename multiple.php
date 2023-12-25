@@ -53,7 +53,29 @@
 	<?php 
 	if (isset($_FILES) && !empty($_FILES)) {
 		foreach ($_FILES['image']['tmp_name'] as $index => $tmp_name) {
-			// code...
+			$fileName = $_FILES['image']['name'][$index];
+			$NameandExt = explode('.', $fileName);
+			$onlyName = $NameandExt[0];
+			$extension = $NameandExt[(count($NameandExt) - 1)];
+			$supported_ext = ['png','jpg','jpeg'];
+			if(!in_array($extension, $supported_ext)){
+				echo '<p class="text-red">error uploading file! file type not supported! only .png, .jpg, .jpeg</p><br>';
+				exit;
+			}
+			if($_FILES['image']['size'][$index] > 1*1024*1024){
+				echo '<p class="text-red">error uploading file! file size must be less then 1MB</p><br>';
+				exit;
+			}
+			if(($_FILES['image']['error'][$index] >= 1)){
+			echo '<p class="text-red">Error Uploading File! There is some error!</p><br>';
+			exit;
+			}
+			if(move_uploaded_file($_FILES['image']['tmp_name'][$index], 'uploaded/'.$onlyName.'-'.$index.'.'.$extension)){
+			echo "<p class='text-green'>File was uploaded successfully!</p><br>";
+				exit;
+			}else{
+				echo '<p class="text-red">there is some error!your file was not uploaded!</p><br>';
+			}
 		}
 	}
 
