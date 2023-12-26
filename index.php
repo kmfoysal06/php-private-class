@@ -56,8 +56,8 @@
 		$NameandExt = explode('.', $fileName);
 		$onlyName = $NameandExt[0];
 		$extension = $NameandExt[(count($NameandExt) - 1)];
-		$supported_ext = ['png','jpg','jpeg'];
-		if(!in_array($extension, $supported_ext)){
+		$supported_ext = ['image/png','image/jpg','image/jpeg'];
+		if(!in_array($_FILES['image']['type'], $supported_ext)){
 			echo '<p class="text-red">error uploading file! file type not supported! only .png, .jpg, .jpeg</p>';
 			echo print_r();
 			exit;
