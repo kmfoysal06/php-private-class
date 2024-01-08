@@ -59,7 +59,6 @@
 		$supported_ext = ['image/png','image/jpg','image/jpeg'];
 		if(!in_array($_FILES['image']['type'], $supported_ext)){
 			echo '<p class="text-red">error uploading file! file type not supported! only .png, .jpg, .jpeg</p>';
-			echo print_r();
 			exit;
 		}
 		if($_FILES['image']['size'] > 1*1024*1024){
