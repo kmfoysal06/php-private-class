@@ -5,7 +5,7 @@
 // $output = 1706955842/(60*60*24*365);
 // $date = strtotime('12-03-2006');
 // $output = date('D',$date);
-$output = date('d',strtotime('next sunday'));
+// $output = date('d',strtotime('next sunday'));
 
 
 
