@@ -26,3 +26,6 @@ date_default_timezone_set('Asia/Dhaka');
 // $endDate = strtotime('next tuesday');
 // $remainDay = $endDate - strtotime('today');
 // echo $remainDay/(60*60*24).' Day remain to next sunday'; 
+
+$date = date('D');
+echo "today is $date ";
