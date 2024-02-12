@@ -4,4 +4,4 @@ use Carbon\Carbon;
 
 $c = new Carbon;
 // echo var_dump($c.timezone);
-echo Carbon::yesterday();
+echo Carbon::now();
