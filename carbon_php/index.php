@@ -44,4 +44,18 @@ $c = new Carbon('-2 years 5 days','asia/dhaka');
 // $c->subYears(4);
 // echo $c->toDateTimeString();
 
-$start
+$startDate = new Carbon('2020-01-01');
+$endDate = Carbon::today();
+
+
+// echo var_dump($startDate->eq($endDate));
+// echo var_dump($startDate->lte($endDate));
+
+// check condition in carbon 
+// eq - To check if two dates are equal
+// ne - To check if two dates are not equal
+// lt - To check if a date is less than another
+// lte - To check if a date is less than or equal to another
+// gte - To check if a date is greater than or equal to another
+// gt - To check if a date is greater than another
+
