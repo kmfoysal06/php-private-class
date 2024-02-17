@@ -44,8 +44,8 @@ $c = new Carbon('-2 years 5 days','asia/dhaka');
 // $c->subYears(4);
 // echo $c->toDateTimeString();
 
-$startDate = new Carbon('2020-01-01');
-$endDate = Carbon::today();
+// $startDate = new Carbon('2020-01-01');
+// $endDate = Carbon::today();
 
 
 // echo var_dump($startDate->eq($endDate));
@@ -59,3 +59,27 @@ $endDate = Carbon::today();
 // gte - To check if a date is greater than or equal to another
 // gt - To check if a date is greater than another
 
+
+$startDate = new Carbon('2020-01-01');
+$endDate = Carbon::today();
+
+// echo $startDate->diffInYears($endDate);
+// echo $startDate->diffInDays($endDate);
+// echo $startDate->diffInWeeks($endDate);
+// echo $startDate->diffInHours($endDate);
+// echo $startDate->diffInMonths($endDate);
+// echo $startDate->diffInMinutes($endDate);
+// echo $startDate->diffInSeconds($endDate);
+
+$born = new Carbon('2006-06-12');
+// echo var_dump($born->age);
+
+// echo 'i am '.$born->age.' years old';
+
+$dt = Carbon::parse('+2 days');
+// echo $dt->startOfDay();
+// echo $dt->endOfDay();
+// echo $dt->startOfMonth();
+// echo $dt->endOfMonth();
+// echo $dt->startOfYear();
+// echo $dt->endOfYear();
