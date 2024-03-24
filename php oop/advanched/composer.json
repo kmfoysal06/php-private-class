@@ -1,0 +1,15 @@
+{
+    "name": "kmfoysal06/advanched",
+    "authors": [
+        {
+            "name": "Kazi Mohammad Foysal",
+            "email": "foysalkazimd01@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+			"psr-4":{
+					"App\\": "app"
+				}
+		}
+}
